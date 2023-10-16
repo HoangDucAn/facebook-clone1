@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./btvn-b2.css" />
+        <link rel="stylesheet" href="./reset-btvn-b2.css" />
+    </head>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        background: #d9d9d9;
+    }
+    header {
+        height: 81px;
+        width: 100%;
+        background: #808080;
+        position:fixed;
+        top:0;
+        border-bottom: 1px solid;
+    }
+    .header-menu {
+        display: flex;
+        gap: 151px;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-item {
+        list-style: none;
+        margin-top: 33px;
+    }
+    .menu-item:hover{
+        background-color: white;
+    }
+    .list-item-about-us{
+        position:absolute;
+        top: 35px;
+        left: 0px;
+        background-color: gray;
+        width: 100px;
+        padding-left: 0;
+        list-style-type: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+    .list-item-about-us li{
+        padding: 8px 10px;
+    }
+    .list-item-about-us li:hover{
+        background-color: #d2d2d2;
+    }
+    .header-item:hover{
+        background-color: rgb(185,185,185);
+    }
+    .header-item:hover > .list-item-about-us{
+        max-height: 200px;
+    }
+    .first-main {
+        width: 100%;
+        height: 558px;
+        background: #969595;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .first-main h3 {
+        color: #fff;
+        font-family: Inter;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    
+    .techlead-has {
+        width: 900px;
+        height: 482px;
+        background: #f58420;
+        display: flex;
+        margin-top: -50px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .door {
+        height: 380px;
+        width: 282px;
+        border-radius: 282.292px 282.292px 0 0;
+        background: #fff;
+    }
+    .info {
+        width: 465.625px;
+        height: 295px;
+        display: flex;
+        flex-direction: column;
+    }
+    .info h3 {
+        color: #fff;
+        font-family: Inter;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .info p {
+        color: #fff;
+        text-align: justify;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .info hr {
+        width: 100%;
+        height: 2px;
+        background: white;
+    }
+    
+    .libats {
+        margin-top: 88px;
+        width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .libats-header {
+        color: #808080;
+        font-family: Inter;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .libats-list {
+        margin-top: 34px;
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+    }
+    
+    .circle {
+        width: 114px;
+        height: 114px;
+        border-radius: 999px;
+        background-color: #f58420;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .libats-title {
+        color: #000;
+        font-family: Inter;
+        font-size: 40px;
+        font-weight: 700;
+        margin-top: 12px;
+        margin-left: 55px;
+    }
+    
+    .libats-desc {
+        color: #000;
+        text-align: justify;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 24px;
+        width: 229px;
+        height: 226px;
+    }
+    
+    .techlead-desc {
+        width: 100%;
+        height: 453px;
+        background: #12938d;
+        padding: 106px 188px;
+        align-items: center;
+        display: flex;
+    }
+    .techlead__info {
+        display: flex;
+    }
+    .techlead__info1 {
+        color: #fff;
+        text-align: justify;
+        font-family: Inter;
+        font-size: 100px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 69px 77px 70px 84px;
+    }
+    .techlead__info2 {
+        color: #fff;
+        text-align: justify;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 45px 0;
+        width: 843px;
+        height: 166px;
+    }
+    .red {
+        width: 100%;
+        height: 563px;
+        background: #ba2726;
+    }
+    .about {
+        width: 900px;
+        height: 547px;
+        background: #f58420;
+        margin-top: -514px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .about-door {
+        height: 390px;
+        width: 304px;
+        border-radius: 0 152px 0 0;
+        background: #d9d9d9;
+    }
+    
+    .about-desc {
+        width: 405px;
+        margin-top: -137px;
+    }
+    .about-desc__title {
+        color: #fff;
+        text-align: justify;
+        font-family: Inter;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-bottom: 16px;
+    }
+    .about-desc__info {
+        color: #fff;
+        text-align: justify;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 22px;
+    }
+    .lorem {
+        width: 100%;
+        background: #d9d9d9;
+        margin-top: 46px;
+        width: 900px;
+        height: 335px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .gotiv {
+        display: flex;
+    }
+    .gotiv hr {
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        border: none;
+    }
+    .lorem-title {
+        white-space: nowrap;
+        margin-left: 46px;
+    }
+    .square {
+        margin-top: 27px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .square div {
+        width: 192px;
+        height: 192px;
+        background: #f58420;
+    }
+    .square-lorem {
+        margin-top: 29px;
+        color: #000;
+        text-align: justify;
+        font-family: Inter;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-align: center;
+    }
+    
+    .contact {
+        width: 100%;
+        height: 241px;
+        background: #ba2726;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 73px;
+    }
+    .contact h3 {
+        color: #fff;
+        text-align: justify;
+        font-family: Inter;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    </style>
+    
+    <body>
+        <header class="header">
+            <div class="menu">
+                <ul class="header-menu">
+                    <li class="menu-item">Libarts</li>
+                    <li class="menu-item">Collab</li>
+                    <li class="menu-item">Home</li>
+                    <li class="menu-item">Blog</li>
+                    <li class="menu-item">About Us
+                    <div class="list-item-about-us">
+                        <div>An</div>
+                        <div>Ninh</div>
+                        <div>Bi</div>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="first-main">
+                <h3>_Lorem ipsum</h3>
+                <h3>Lorem ipsum dolor sit amet.</h3>
+            </div>
+
+            <div class="techlead-has">
+                <div class="door"></div>
+                <div class="info">
+                    <h3>TechLead là gì</h3>
+                    <hr />
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Blanditiis, laboriosam. Id distinctio ducimus, fuga
+                        excepturi, ullam sint nostrum cum nam, vel repellat
+                        perspiciatis? Aliquam, optio rem. Earum, dignissimos
+                        eaque! Cumque, cupiditate voluptatem, doloremque
+                        pariatur error eius, ullam iure nesciunt consectetur ab
+                        perspiciatis doloribus laboriosam delectus dolorum hic.
+                        Repellendus iure quasi facilis soluta ipsa, aspernatur
+                        beatae iste repellat quo neque provident veritatis vitae
+                        similique cum ratione possimus illum! Ex praesentium
+                        nesciunt aspernatur recusandae necessitatibus odio error
+                        eos ad? Aut quisquam excepturi possimus soluta
+                        accusantium, dicta sapiente esse nulla! Possimus
+                        consequuntur ut placeat culpa fugiat delectus
+                        voluptatibus, corrupti, saepe beatae aperiam temporibus!
+                    </p>
+                </div>
+            </div>
+
+            <div class="libats">
+                <h2 class="libats-header">Tech lead có gì</h2>
+                <div class="libats-list">
+                    <div>
+                        <div class="circle"></div>
+                        <h2 class="libats-title">Libats</h2>
+                        <p class="libats-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Blanditiis, laboriosam. Id distinctio ducimus,
+                            fuga excepturi, ullam sint nostrum cum nam, vel
+                            repellat perspiciatis? Aliquam, optio rem. Earum,
+                            dignissimos eaque! Cumque, cupiditate voluptatem
+                        </p>
+                    </div>
+                    <div>
+                        <div class="circle"></div>
+                        <h2 class="libats-title">Libats</h2>
+                        <p class="libats-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Blanditiis, laboriosam. Id distinctio ducimus,
+                            fuga excepturi, ullam sint nostrum cum nam, vel
+                            repellat perspiciatis? Aliquam, optio rem. Earum,
+                            dignissimos eaque! Cumque, cupiditate voluptatem
+                        </p>
+                    </div>
+                    <div>
+                        <div class="circle"></div>
+                        <h2 class="libats-title">Libats</h2>
+                        <p class="libats-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Blanditiis, laboriosam. Id distinctio ducimus,
+                            fuga excepturi, ullam sint nostrum cum nam, vel
+                            repellat perspiciatis? Aliquam, optio rem. Earum,
+                            dignissimos eaque! Cumque, cupiditate voluptatem
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="techlead-desc">
+                <div class="techlead-desc__info">
+                    <hr />
+                    <div class="techlead__info">
+                        <p class="techlead__info1">"</p>
+                        <p class="techlead__info2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Blanditiis, laboriosam. Id distinctio ducimus,
+                            fuga excepturi, ullam sint nostrum cum nam, vel
+                            repellat perspiciatis? Aliquam, optio rem. Earum,
+                            dignissimos eaque! Cumque, cupiditate voluptatem,
+                            doloremque pariatur error eius, ullam iure nesciunt
+                            consectetur ab perspiciatis doloribus laboriosam
+                            delectus dolorum hic. Repellendus iure quasi facilis
+                            soluta ipsa, aspernatur beatae iste repellat quo
+                            neque provident veritatis vitae similique cum
+                            ratione possimus illum! Ex praesentium nesciunt
+                            aspernatur recusandae necessitatibus odio error eos
+                            ad? Aut quisquam excepturi possimus soluta
+                            accusantium, dicta sapiente esse nulla! Possimus
+                            consequuntur ut placeat culpa fugiat delectus
+                            voluptatibus, corrupti, saepe beatae aperiam
+                            temporibus!
+                        </p>
+                    </div>
+                    <hr />
+                </div>
+            </div>
+
+            <div class="red"></div>
+            <div class="about">
+                <div class="about-desc">
+                    <h2 class="about-desc__title">About Us</h2>
+                    <hr />
+                    <p class="about-desc__info">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Blanditiis, laboriosam. Id distinctio ducimus, fuga
+                        excepturi, ullam sint nostrum cum nam, vel repellat
+                        perspiciatis? Aliquam, optio rem. Earum, dignissimos
+                        eaque! Cumque, cupiditate voluptatem, doloremque
+                        pariatur error eius, ullam iure nesciunt consectetur ab
+                        perspiciatis doloribus laboriosam delectus dolorum hic.
+                        Repellendus iure quasi facilis soluta ipsa, aspernatur
+                        beatae iste repellat quo neque provident veritatis vitae
+                        similique cum ratione possimus illum! Ex praesentium
+                        nesciunt aspernatur recusandae necessitatibus odio error
+                        eos ad? Aut quisquam excepturi possimus soluta
+                        accusantium, dicta sapiente esse nulla! Possimus
+                        consequuntur ut placeat culpa fugiat delectus
+                        voluptatibus, corrupti, saepe beatae aperiam temporibus!
+                    </p>
+                </div>
+                <div class="about-door"></div>
+            </div>
+
+            <div class="lorem">
+                <div class="gotiv">
+                    <hr />
+                    <h3 class="lorem-title">Lên Báo</h3>
+                </div>
+                <div class="square">
+                    <div>
+                        <div></div>
+                        <h3 class="square-lorem">Lorem ipsum</h3>
+                    </div>
+                    <div>
+                        <div></div>
+                        <h3 class="square-lorem">Lorem ipsum</h3>
+                    </div>
+                    <div>
+                        <div></div>
+                        <h3 class="square-lorem">Lorem ipsum</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact">
+                <h3>Contact Us</h3>
+            </div>
+        </main>
+    </body>
+</html>
